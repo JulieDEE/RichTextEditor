@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Toggle from './Toggle';
+import Ribbon from './Ribbon';
+import TextEditor from './TextEditor';
+import Article from './Article';
+import { useState, useEffect } from 'react';
+import Editor from './Editor';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBold, faUnderline, faItalic, faCheck, faSave, faEye, faInfoCircle, faImage, faTrash, faListOl, faListUl, faPalette } from '@fortawesome/free-solid-svg-icons';
+import ArticleCreate from './ArticleCreate';
+library.add(faBold, faUnderline, faItalic, faCheck, faSave, faEye, faInfoCircle, faImage, faTrash, faListOl, faListUl, faPalette);
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+        <ArticleCreate />
     </div>
   );
 }

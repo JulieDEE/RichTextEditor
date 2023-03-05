@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8FBFC;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.DraftEditor-root {
+  font-size: 16px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.public-DraftEditor-content {
+  min-height: 150px;
+  font-family: Arial, sans-serif;
+}
+
+.public-DraftEditorPlaceholder-root {
+  color: gray;
+}
+
+.save{
+  border: 1px solid #ccc;
+  box-shadow: -3px 3px 6px -3px #A7A7A7; 
+  color : #a7a7a7;
+
+}
+
+.upload{
+    border: 1px solid #ccc;
+}
+
+.publish{
+  box-shadow: -3px 3px 6px -3px #A7A7A7; 
+  background-color: #5c6af3;
+
+  &:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.preview{
+  border: 1px solid #ccc;
+  box-shadow: -3px 3px 6px -3px #A7A7A7; 
+  color : #fff;
+  background-color: #a7a7a7;
+}
+
+.showCover:hover{
+  .imageFilter{
+    display: flex;
+  }
+}
+
+.imageFilter{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap : 20px;
+  padding: 10px 20px;
+  display: none;
+
+  .trash{
+      background-color: #d64040;
+    }
+
+  .edit{
+      background-color: #5C6AF3;
+    }
+
+  button{
+    color : white;
+
+
+    &:hover{
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  label{
+        color : white;
+
+
+    &:hover{
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.active{
+  background-color: #ccc;
+  border-radius: 10px;
+  padding : 5px 12px;
+}
